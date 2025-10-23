@@ -1,0 +1,187 @@
+{
+  "project": {
+    "name": "Malik Waqas Saeed - Portfolio",
+    "description": "A professional personal portfolio website for Malik Waqas Saeed — showcasing photography, videography, and creative work with dark/light mode, responsive design, and interactive animations.",
+    "framework": "Next.js 14 (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS + Framer Motion",
+    "theme": {
+      "primaryColor": "#007F5B",
+      "accentColor": "#75FFD8",
+      "darkBackground": "#0E0E0E",
+      "lightBackground": "#F8F9FA",
+      "textDark": "#0E0E0E",
+      "textLight": "#FFFFFF",
+      "fontFamily": {
+        "heading": "Poppins, sans-serif",
+        "body": "Inter, sans-serif"
+      },
+      "mode": "light/dark toggle"
+    },
+    "layout": {
+      "header": {
+        "logo": "MW.S",
+        "links": ["Home", "About", "Portfolio", "Services", "Testimonials", "Contact"],
+        "themeToggle": true,
+        "position": "sticky",
+        "style": "translucent with border bottom #75FFD8 opacity-20"
+      },
+      "footer": {
+        "text": "Malik Waqas Saeed — Creative Vision through Lens",
+        "socials": ["Instagram", "LinkedIn", "Behance", "Email"],
+        "quickLinks": ["Home", "About", "Services", "Contact"],
+        "copyright": "© 2025 Malik Waqas Saeed. Built with ❤️ using Next.js & TailwindCSS",
+        "background": "#0E0E0E",
+        "textColor": "#FFFFFF"
+      }
+    },
+    "pages": [
+      {
+        "name": "Home",
+        "path": "/",
+        "sections": [
+          {
+            "type": "hero",
+            "background": "video_or_image",
+            "overlay": "linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.9))",
+            "content": {
+              "heading": "Hi, I’m Malik Waqas Saeed 👋",
+              "subheading": "Creative Photographer & Visual Storyteller",
+              "ctaButtons": ["View Portfolio", "Contact Me"]
+            }
+          },
+          {
+            "type": "gallery-carousel",
+            "title": "Recent Highlights",
+            "dataSource": "Instagram API or local folder",
+            "animation": "fade-in"
+          }
+        ]
+      },
+      {
+        "name": "About",
+        "path": "/about",
+        "sections": [
+          {
+            "type": "profile",
+            "image": "profile-photo.jpg",
+            "heading": "About Me",
+            "text": "I tell stories through my lens — blending realism and emotion into timeless visuals.",
+            "style": "two-column layout"
+          },
+          {
+            "type": "timeline",
+            "title": "My Journey",
+            "items": [
+              "Freelance Photographer (2017-2020)",
+              "Cinematographer & Editor (2020-2023)",
+              "Creative Director (2023-Present)"
+            ]
+          },
+          {
+            "type": "skills",
+            "title": "Tools & Expertise",
+            "tags": ["Adobe Lightroom", "Canon EOS R5", "Portraits", "Color Grading", "Brand Visuals"]
+          }
+        ]
+      },
+      {
+        "name": "Portfolio",
+        "path": "/portfolio",
+        "sections": [
+          {
+            "type": "gallery",
+            "filterOptions": ["All", "Portraits", "Events", "Products", "Cinematic"],
+            "gridType": "masonry",
+            "modalView": {
+              "fields": ["Title", "Description", "Camera", "Location"]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Services",
+        "path": "/services",
+        "sections": [
+          {
+            "type": "serviceCards",
+            "columns": 3,
+            "cards": [
+              {
+                "title": "Photography Packages",
+                "description": "Event, portrait, and commercial photography sessions with post-editing."
+              },
+              {
+                "title": "Cinematography",
+                "description": "Short films, ads, and music videos with professional color grading."
+              },
+              {
+                "title": "Creative Consultation",
+                "description": "Brand storytelling and creative direction for social campaigns."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Testimonials",
+        "path": "/testimonials",
+        "sections": [
+          {
+            "type": "testimonialSlider",
+            "background": "gradient-accent",
+            "cards": [
+              {
+                "client": "Ali Raza",
+                "project": "Wedding Shoot",
+                "feedback": "Malik captured our moments beautifully — truly cinematic work!"
+              },
+              {
+                "client": "Ayesha Khan",
+                "project": "Brand Campaign",
+                "feedback": "Professional, creative, and incredibly easy to work with!"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Contact",
+        "path": "/contact",
+        "sections": [
+          {
+            "type": "contactInfo",
+            "text": "Let’s Collaborate!",
+            "details": {
+              "location": "Lahore, Pakistan",
+              "email": "malikwaqas@example.com"
+            }
+          },
+          {
+            "type": "contactForm",
+            "fields": ["Name", "Email", "Message"],
+            "submitText": "Send Message",
+            "animation": "gradient-hover"
+          }
+        ]
+      }
+    ],
+    "features": {
+      "darkMode": true,
+      "responsiveDesign": true,
+      "framerMotionAnimations": true,
+      "seoReady": true,
+      "lazyLoadImages": true,
+      "scrollAnimations": true,
+      "formValidation": "React Hook Form + EmailJS"
+    },
+    "deployment": {
+      "hosting": "Vercel",
+      "seo": {
+        "title": "Malik Waqas Saeed | Photographer & Visual Storyteller",
+        "description": "Official portfolio of Malik Waqas Saeed — professional photographer and cinematographer specializing in creative visual storytelling.",
+        "keywords": ["photography", "cinematography", "creative portfolio", "visual storytelling"]
+      }
+    }
+  }
+}
